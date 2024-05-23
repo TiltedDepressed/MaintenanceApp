@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MaintenanceApplication" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+
+        <item name="colorPrimary">@color/custom_white_2</item>
+        <item name="android:textColorPrimary">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="textInputStyle">@color/white</item>
+        <item name="textInputFilledStyle">@color/white</item>
+        <item name="textInputOutlinedStyle">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+        <item name="colorSecondary">@color/white</item>
+
+
+
+    </style>
+
+    <style name="Theme.MaintenanceApplication" parent="Base.Theme.MaintenanceApplication" >
+
+
+    </style>
+
+
+
+</resources>
