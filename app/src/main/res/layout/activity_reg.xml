@@ -182,6 +182,10 @@
     android:textAlignment="center"
     android:textAllCaps="false"
     />
+
+
+
+
             <TextView
                 android:layout_marginTop="13dp"
                 android:textAlignment="center"
