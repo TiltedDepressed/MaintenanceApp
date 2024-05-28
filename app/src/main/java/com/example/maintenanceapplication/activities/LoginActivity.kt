@@ -82,7 +82,7 @@ class LoginActivity : AppCompatActivity() {
             }
 
             override fun onFailure(call: Call<User>, t: Throwable) {
-                Log.e("RegActivity",t.message.toString())
+                Log.e("LoginActivity",t.message.toString())
             }
 
         })

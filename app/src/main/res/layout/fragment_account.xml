@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background"
+    tools:context=".fragments.AccountFragment"
+    android:id="@+id/main"
+    >
+
+    <LinearLayout
+        android:id="@+id/contentLayout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="30dp"
+        >
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:id="@+id/topButtonsLayout"
+            android:orientation="horizontal"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            >
+        <LinearLayout
+            android:paddingLeft="20dp"
+            android:orientation="vertical"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            >
+
+            <ImageView
+                android:visibility="invisible"
+                android:id="@+id/settingsImageView"
+                android:background="@drawable/settings_button_behavior"
+                android:layout_width="64dp"
+                android:layout_height="64dp"/>
+
+
+
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="190dp"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:paddingEnd="20dp"
+            >
+
+            <ImageView
+                android:id="@+id/logOutImageView"
+                android:background="@drawable/log_out_button_behavior"
+                android:layout_width="64dp"
+                android:layout_height="64dp"/>
+
+
+        </LinearLayout>
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+        <ImageView
+            android:layout_marginTop="-50dp"
+            android:src="@drawable/ic_profile_2"
+            android:layout_width="128dp"
+            android:layout_height="128dp"/>
+
+<TextView
+    android:id="@+id/usernameTextView"
+    android:textColor="@color/white"
+    android:textSize="30sp"
+    android:textAlignment="center"
+    tools:text="UserName"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fontFamily="@font/wix_made_for_display_semi_bold"
+    />
+
+        <TextView
+            android:id="@+id/emailTextView"
+            android:textColor="@color/custom_white_2"
+            android:textSize="22sp"
+            android:textAlignment="center"
+            tools:text="Email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/wix_made_for_display_semi_bold"
+            />
+
+        <TextView
+            android:paddingLeft="22dp"
+            android:paddingBottom="3dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            android:text="@string/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/wix_made_for_display_semi_bold"
+            />
+        
+        <EditText
+            android:id="@+id/nameEditText"
+            android:background="@drawable/edit_text_background"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:fontFamily="@font/wix_made_for_display_semi_bold"
+            android:textColorHint="@color/custom_white_2"
+            android:textSize="22sp"
+            android:hint="@string/name"
+            android:paddingLeft="22dp"
+            />
+        <TextView
+            android:paddingLeft="22dp"
+            android:paddingBottom="3dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            android:text="@string/email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/wix_made_for_display_semi_bold"
+            />
+
+        <EditText
+            android:id="@+id/emailEditText"
+            android:background="@drawable/edit_text_background"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:fontFamily="@font/wix_made_for_display_semi_bold"
+            android:textColorHint="@color/custom_white_2"
+            android:textSize="22sp"
+            android:hint="@string/email"
+            android:paddingLeft="22dp"
+            />
+        <TextView
+            android:paddingLeft="22dp"
+            android:paddingBottom="3dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            android:text="@string/password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/wix_made_for_display_semi_bold"
+            />
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            android:background="@drawable/edit_text_background"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:fontFamily="@font/wix_made_for_display_semi_bold"
+            android:textColorHint="@color/custom_white_2"
+            android:textSize="22sp"
+            android:hint="@string/password"
+            android:paddingLeft="22dp"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="160dp"
+                android:layout_height="65dp"
+                android:background="@drawable/button_behavior"
+                android:text="@string/delete"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="@font/wix_made_for_display_semi_bold"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:layout_marginEnd="5dp"
+                />
+
+            <Button
+                android:id="@+id/updateButton"
+                android:layout_marginStart="5dp"
+                android:layout_width="160dp"
+                android:layout_height="65dp"
+                android:background="@drawable/button_behavior_2"
+                android:text="@string/update"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="@font/wix_made_for_display_semi_bold"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                />
+
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+</LinearLayout>

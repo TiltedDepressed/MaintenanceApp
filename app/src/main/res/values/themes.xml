@@ -13,6 +13,8 @@
         <item name="textInputOutlinedStyle">@color/white</item>
         <item name="colorControlHighlight">@color/white</item>
         <item name="colorSecondary">@color/white</item>
+        <item name="colorOnSurface">#4DFFFFFF</item>
+
 
 
 

@@ -101,7 +101,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/wix_made_for_display_bold"
-            android:text="Enter your PIN"
+            android:text="@string/enter_your_pin"
             android:textColor="@color/white"
             />
 
@@ -335,7 +335,7 @@
                 android:layout_height="65dp"
                 android:background="@drawable/button_behavior"
                 android:layout_marginTop="30dp"
-                android:text="Continue"
+                android:text="@string/_continue"
                 android:textColor="@color/white"
                 android:textSize="18sp"
                 android:fontFamily="@font/wix_made_for_display_semi_bold"

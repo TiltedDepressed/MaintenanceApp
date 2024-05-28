@@ -1,3 +1,31 @@
 <resources>
     <string name="app_name">MaintenanceApplication</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="create_account">Create account</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="_continue">Continue</string>
+    <string name="terms_amp_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="sign_in_account">Sign in account</string>
+    <string name="back">Back</string>
+    <string name="enter_your_pin">Enter your PIN</string>
+    <string name="create_your_pin">Create your PIN</string>
+    <string name="delete">Delete</string>
+    <string name="update">Update</string>
+    <string name="home">Home</string>
+    <string name="profile">Profile</string>
+    <string name="history">History</string>
+    <string name="my_requests">My requests</string>
+    <string name="create_request">Create request</string>
+    <string name="create">Create</string>
+    <string name="time">Time</string>
+    <string name="current_time">current time</string>
+    <string name="date">Date</string>
+    <string name="current_date">current date</string>
+    <string name="description">Description</string>
+    <string name="description_of_the_problem">description of the problem</string>
+    <string name="current_date_and_time">current date and time</string>
+    <string name="date_and_time">date and time</string>
 </resources>

@@ -203,12 +203,13 @@ class PinActivity : AppCompatActivity() {
                     val responseBody = response.body()!!
                     binding.usernameTextView.text = responseBody.login
                     if(responseBody.pin == ""){
-                        binding.pinText.text = "Create your PIN"
+
+                        binding.pinText.setText(R.string.create_your_pin)
                         if(pinLengthCounter == 4){
                             updateUserPIN(userID,pin,token)
                         }
                     } else {
-                        binding.pinText.text = "Enter your PIN"
+                        binding.pinText.setText(R.string.enter_your_pin)
                         if(pin == responseBody.pin){
                             val intent = Intent(this@PinActivity, MainActivity::class.java)
                             startActivity(intent)

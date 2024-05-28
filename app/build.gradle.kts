@@ -14,6 +14,7 @@ android {
         versionCode = 1
         versionName = "1.0"
 
+
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -58,6 +59,10 @@ dependencies {
     //Blurry
 
     implementation("jp.wasabeef:blurry:4.0.1")
+
+    // circle image view
+    implementation("de.hdodenhof:circleimageview:3.1.0")
+
 
 
 

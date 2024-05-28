@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">MaintenanceApplication</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="create_account">Регистрация</string>
+    <string name="name">Имя</string>
+    <string name="email">Эл.Почта</string>
+    <string name="password">Пароль</string>
+    <string name="_continue">Продолжить</string>
+    <string name="terms_amp_conditions">Условия использования</string>
+    <string name="sign_in_account">Войти в аккаунт</string>
+    <string name="back">Назад</string>
+    <string name="enter_your_pin">Введите свой PIN-код</string>
+    <string name="create_your_pin">Создайте свой PIN-код</string>
+    <string name="delete">Удалить</string>
+    <string name="update">Обновить</string>
+    <string name="home">Главная</string>
+    <string name="profile">Профиль</string>
+    <string name="history">История</string>
+    <string name="my_requests">My requests</string>
+    <string name="create_request">Create request</string>
+    <string name="create">Create</string>
+    <string name="time">Time</string>
+    <string name="current_time">current time</string>
+    <string name="date">Date</string>
+    <string name="current_date">current date</string>
+    <string name="description">Description</string>
+    <string name="current_date_and_time">current date and time</string>
+    <string name="date_and_time">date and time</string>
+    <string name="description_of_the_problem">description of the problem</string>
+</resources>
