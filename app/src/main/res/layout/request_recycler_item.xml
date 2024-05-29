@@ -31,7 +31,7 @@
                 android:textColor="@color/custom_white_2"
                 android:textSize="15sp"
                 android:fontFamily="@font/wix_made_for_display_bold"
-                android:text="Problem name:"
+                android:text="@string/problem_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -40,7 +40,7 @@
                 android:textColor="@color/custom_white_2"
                 android:textSize="15sp"
                 android:fontFamily="@font/wix_made_for_display_bold"
-                android:text="Date and time:"
+                android:text="@string/date_and_time_"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 
@@ -49,7 +49,7 @@
                 android:textColor="@color/custom_white_2"
                 android:textSize="15sp"
                 android:fontFamily="@font/wix_made_for_display_bold"
-                android:text="Status:"
+                android:text="@string/status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
 

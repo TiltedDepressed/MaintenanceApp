@@ -37,4 +37,8 @@
     <string name="short_name">short name</string>
     <string name="favorite_details">Favorite details</string>
     <string name="change_request_nstatus">Change request \nstatus</string>
+    <string name="edit_request">Edit request</string>
+    <string name="problem_name">Problem name:</string>
+    <string name="date_and_time_">Date and time:</string>
+    <string name="status">Status:</string>
 </resources>

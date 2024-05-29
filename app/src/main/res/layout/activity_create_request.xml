@@ -40,7 +40,7 @@
             android:textColor="@color/white"
             android:textSize="18sp"
             android:textAlignment="textStart"
-            android:text="short name"
+            android:text="@string/short_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/wix_made_for_display_semi_bold"
