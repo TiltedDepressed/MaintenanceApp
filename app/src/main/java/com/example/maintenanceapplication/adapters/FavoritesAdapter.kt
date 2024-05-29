@@ -7,23 +7,24 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.maintenanceapplication.R
 import com.example.maintenanceapplication.databinding.RequestRecyclerItemBinding
+import com.example.maintenanceapplication.model.Favorites
 import com.example.maintenanceapplication.model.Request
 
 
-class RequestsAdapter(): RecyclerView.Adapter<RequestsAdapter.ViewHolder>() {
-    private var requestList = ArrayList<Request>()
-    var onItemClick : ((Request) -> Unit)? = null
+class FavoritesAdapter(): RecyclerView.Adapter<FavoritesAdapter.ViewHolder>() {
+    private var requestList = ArrayList<Favorites>()
+    var onItemClick : ((Favorites) -> Unit)? = null
 
 
-    fun setRequestList(requestList: List<Request>){
-        this.requestList = requestList as ArrayList<Request>
+    fun setRequestList(requestList: List<Favorites>){
+        this.requestList = requestList as ArrayList<Favorites>
         notifyDataSetChanged()
     }
 
     inner class ViewHolder(val binding: RequestRecyclerItemBinding): RecyclerView.ViewHolder(binding.root)
 
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RequestsAdapter.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoritesAdapter.ViewHolder {
        return ViewHolder(
            RequestRecyclerItemBinding.inflate(
                LayoutInflater.from(parent.context)
@@ -31,7 +32,7 @@ class RequestsAdapter(): RecyclerView.Adapter<RequestsAdapter.ViewHolder>() {
        )
     }
 
-    override fun onBindViewHolder(holder: RequestsAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: FavoritesAdapter.ViewHolder, position: Int) {
 
         holder.binding.problemName.text = requestList[position].name
         holder.binding.problemDateAndTime.text = requestList[position].date
@@ -39,7 +40,6 @@ class RequestsAdapter(): RecyclerView.Adapter<RequestsAdapter.ViewHolder>() {
         holder.binding.contentLayout.setOnClickListener {
             onItemClick!!.invoke(requestList[position])
         }
-
         if(requestList[position].status == "1"){
             holder.binding.problemStatus.setText(R.string.active)
             holder.binding.circle.background = ContextCompat.getDrawable(holder.itemView.context,R.drawable.circle_yellow)

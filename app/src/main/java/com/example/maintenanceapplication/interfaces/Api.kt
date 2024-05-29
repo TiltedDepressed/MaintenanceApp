@@ -1,5 +1,6 @@
 package com.example.maintenanceapplication.interfaces
 import com.example.maintenanceapplication.model.ApiResponse
+import com.example.maintenanceapplication.model.Favorites
 import com.example.maintenanceapplication.model.User
 import com.example.maintenanceapplication.model.Request
 import com.google.gson.JsonObject
@@ -71,7 +72,7 @@ interface Api {
     ): Call<ApiResponse<Request>>
 
     @Headers("Content-Type:application/json")
-    @POST("request/{requestId}")
+    @POST("request/find/id/{requestId}")
     fun findRequestByRequestId(
         @Path("requestId") id : String,
         @Body body:JsonObject
@@ -90,5 +91,39 @@ interface Api {
         @Path("requestId") id : String,
         @Body body: JsonObject
     ): Call<Request>
+
+
+    //Favorites
+    @Headers("Content-Type:application/json")
+    @POST("favorites")
+    fun getAllFavorites(): Call<ApiResponse<Request>>
+
+    @Headers("Content-Type:application/json")
+    @POST("favorites/create")
+    fun createNewFavorites(
+        @Body body: JsonObject
+    ): Call<Favorites>
+
+    @Headers("Content-Type:application/json")
+    @POST("favorites/find/fav/{userId}")
+    fun findFavoritesByUserId(
+        @Path("userId") id : String,
+        @Body body: JsonObject
+    ): Call<ApiResponse<Favorites>>
+
+
+    @Headers("Content-Type:application/json")
+    @POST("favorites/delete/{favoritesId}")
+    fun deleteFavoritesByFavoritesId(
+        @Path("favoritesId") id : String,
+        @Body body : JsonObject
+    ): Call<Favorites>
+
+    @Headers("Content-Type:application/json")
+    @POST("favorites/update/{favoritesId}")
+    fun updateFavoritesByRequestId(
+        @Path("favoritesId") id : String,
+        @Body body: JsonObject
+    ): Call<Favorites>
 
 }

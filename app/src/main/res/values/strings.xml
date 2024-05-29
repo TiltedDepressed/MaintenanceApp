@@ -28,4 +28,13 @@
     <string name="description_of_the_problem">description of the problem</string>
     <string name="current_date_and_time">current date and time</string>
     <string name="date_and_time">date and time</string>
+    <string name="favorites">Favorites</string>
+    <string name="active">Active</string>
+    <string name="complete">Complete</string>
+    <string name="cancel">Cancel</string>
+    <string name="change">Change</string>
+    <string name="request_details">Request details</string>
+    <string name="short_name">short name</string>
+    <string name="favorite_details">Favorite details</string>
+    <string name="change_request_nstatus">Change request \nstatus</string>
 </resources>

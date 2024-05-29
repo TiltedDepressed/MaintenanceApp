@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/gradient_background"
+    tools:context=".activities.RequestDetailActivity">
+
+
+    <LinearLayout
+        android:padding="20dp"
+        android:orientation="vertical"
+        android:id="@+id/contentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        >
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:layout_marginEnd="20dp"
+            android:id="@+id/topButtonsLayout"
+            android:orientation="horizontal"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                >
+
+                <ImageView
+                    android:id="@+id/favoriteImageView"
+                    android:background="@drawable/favorite_button_behavior"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:src="@drawable/ic_gears"
+            android:layout_marginTop="-40dp"
+            android:layout_width="128dp"
+            android:layout_height="128dp"/>
+
+        <TextView
+            android:fontFamily="@font/wix_made_for_display_bold"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textAlignment="center"
+            android:text="@string/favorite_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:paddingLeft="22dp"
+            android:paddingBottom="3dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            android:text="@string/short_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/wix_made_for_display_semi_bold"
+            />
+
+        <TextView
+            android:paddingTop="15dp"
+            android:id="@+id/nameEditText"
+            android:background="@drawable/edit_text_background"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:textColor="@color/custom_white_2"
+            android:fontFamily="@font/wix_made_for_display_semi_bold"
+            android:textColorHint="@color/custom_white_2"
+            android:textSize="22sp"
+            android:paddingLeft="22dp"
+            />
+        <TextView
+            android:paddingLeft="22dp"
+            android:paddingBottom="3dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            android:text="@string/description_of_the_problem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/wix_made_for_display_semi_bold"
+            />
+
+        <TextView
+            android:paddingTop="30dp"
+            android:id="@+id/descriptionEditText"
+            android:background="@drawable/edit_text_background"
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:fontFamily="@font/wix_made_for_display_semi_bold"
+            android:textColorHint="@color/custom_white_2"
+            android:textSize="22sp"
+            android:textColor="@color/custom_white_2"
+            android:paddingLeft="22dp"
+            />
+        <TextView
+            android:paddingLeft="22dp"
+            android:paddingBottom="3dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textAlignment="textStart"
+            android:text="@string/current_date_and_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/wix_made_for_display_semi_bold"
+            />
+
+        <TextView
+            android:id="@+id/dateEditText"
+            android:background="@drawable/edit_text_background"
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:fontFamily="@font/wix_made_for_display_semi_bold"
+            android:textColorHint="@color/custom_white_2"
+            android:textSize="22sp"
+            android:paddingLeft="22dp"
+            android:paddingTop="15dp"
+            android:textColor="@color/custom_white_2"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="340dp"
+                android:layout_height="65dp"
+                android:background="@drawable/button_behavior"
+                android:text="@string/back"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:fontFamily="@font/wix_made_for_display_semi_bold"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:layout_marginEnd="5dp"
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

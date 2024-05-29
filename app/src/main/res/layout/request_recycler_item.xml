@@ -9,9 +9,10 @@
     android:orientation="vertical">
 
     <LinearLayout
+        android:id="@+id/contentLayout"
         android:layout_marginTop="10dp"
         tools:background="@color/black"
-        android:background="@drawable/card_view_background"
+        android:background="@drawable/card_view_behavior"
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:orientation="horizontal"
@@ -91,7 +92,8 @@
                 android:layout_height="wrap_content">
 
                 <View
-                    android:layout_marginTop="2dp"
+                    android:id="@+id/circle"
+                    android:layout_marginTop="1dp"
                     android:background="@drawable/circle"
                     android:layout_width="8dp"
                     android:layout_height="8dp"

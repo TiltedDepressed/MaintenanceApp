@@ -13,7 +13,7 @@
 
     </item>
 
-    <item android:title="@string/history" android:icon="@drawable/ic_history"
+    <item android:title="@string/favorites" android:icon="@drawable/ic_history"
         android:id="@+id/historyFragment"
         >
 

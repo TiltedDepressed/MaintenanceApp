@@ -16,6 +16,8 @@ import retrofit2.Response
 class HomeViewModel: ViewModel() {
     private var requestListLiveData = MutableLiveData<List<Request>>()
 
+    private var allRequestsListLiveData = MutableLiveData<List<Request>>()
+
 
     fun getRequestsByUserId(id: String,data:JsonObject){
         val api = ServiceBuilder.buildService(Api::class.java)
@@ -38,8 +40,33 @@ class HomeViewModel: ViewModel() {
         })
     }
 
+    fun getAllRequests(){
+        val api = ServiceBuilder.buildService(Api::class.java)
+        api.getAllRequests().enqueue(object :Callback<ApiResponse<Request>>{
+            override fun onResponse(
+                call: Call<ApiResponse<Request>>,
+                response: Response<ApiResponse<Request>>
+            ) {
+               if(response.isSuccessful){
+                   response.body()?.let { requestList->
+                       allRequestsListLiveData.postValue(requestList.result)
+                   }
+               }
+            }
+
+            override fun onFailure(call: Call<ApiResponse<Request>>, t: Throwable) {
+                Log.e("HomeViewModel",t.message.toString())
+            }
+
+        })
+    }
+
     fun observerRequestListLiveData(): LiveData<List<Request>>{
         return requestListLiveData
+    }
+
+    fun observerAllRequestsListLiveData(): LiveData<List<Request>>{
+        return allRequestsListLiveData
     }
 
 

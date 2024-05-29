@@ -19,4 +19,6 @@
     <color name="secondBlack">#0C0C0C</color>
     <color name="secondOrange">#F2613F</color>
     <color name="thirdOrange">#d08369</color>
+    <color name="green">#33ff33</color>
+    <color name="yellow">#ffff00</color>
 </resources>

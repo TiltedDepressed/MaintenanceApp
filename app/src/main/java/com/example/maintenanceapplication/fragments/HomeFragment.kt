@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.example.maintenanceapplication.activities.CreateRequestActivity
+import com.example.maintenanceapplication.activities.RequestDetailActivity
 import com.example.maintenanceapplication.adapters.RequestsAdapter
 import com.example.maintenanceapplication.databinding.FragmentHomeBinding
 import com.example.maintenanceapplication.viewModel.HomeViewModel
@@ -28,6 +29,8 @@ class HomeFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
 
+    private lateinit var userRole: String
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,6 +39,7 @@ class HomeFragment : Fragment() {
         editor = sharePreference.edit()
         requestAdapter = RequestsAdapter()
         homeViewModel = ViewModelProvider(this)[HomeViewModel::class.java]
+        userRole = sharePreference.getString("ROLE","").toString()
 
 
 
@@ -44,13 +48,22 @@ class HomeFragment : Fragment() {
 
         val data = JsonObject()
         data.addProperty("token",token)
-        homeViewModel.getRequestsByUserId(id, data)
 
-        homeViewModel.observerRequestListLiveData().observe(this){requestList->
-            requestAdapter.setRequestList(requestList)
+        //default User
+        if(userRole == "1"){
+            homeViewModel.getRequestsByUserId(id, data)
+            homeViewModel.observerRequestListLiveData().observe(this){requestList->
+                requestAdapter.setRequestList(requestList)
+            }
+
         }
-
-
+        //Observer
+        if(userRole == "2"){
+            homeViewModel.getAllRequests()
+            homeViewModel.observerAllRequestsListLiveData().observe(this){requestList->
+                requestAdapter.setRequestList(requestList)
+            }
+        }
     }
 
     override fun onCreateView(
@@ -65,6 +78,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         prepareRecyclerView()
+        requestAdapter.onItemClick = {request->
+             val intent = Intent(this@HomeFragment.requireActivity(),RequestDetailActivity::class.java)
+             intent.putExtra("REQUEST_ID",request.id)
+             startActivity(intent)
+        }
     }
 
     private fun prepareRecyclerView() {

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/gradient_background"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activities.ChangeStatusActivity">
+    
+    
+    <LinearLayout
+        android:layout_gravity="center"
+        android:padding="25dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:src="@drawable/ic_arrows"
+            android:layout_width="128dp"
+            android:layout_height="128dp"/>
+
+        <TextView
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/wix_made_for_display_bold"
+            android:textColor="@color/white"
+            android:textSize="32sp"
+            android:textAlignment="center"
+            android:text="@string/change_request_nstatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/firstRadioButton"
+                android:fontFamily="@font/wix_made_for_display_bold"
+                android:text="Active"
+                android:textSize="28sp"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"/>
+
+            <RadioButton
+                android:id="@+id/secondRadioButton"
+                android:fontFamily="@font/wix_made_for_display_bold"
+                android:text="Complete"
+                android:textSize="28sp"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"/>
+
+            <RadioButton
+                android:id="@+id/thirdRadioButton"
+                android:fontFamily="@font/wix_made_for_display_bold"
+                android:text="Cancel"
+                android:textSize="28sp"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"/>
+
+
+        </RadioGroup>
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:id="@+id/backButton"
+            android:layout_width="350dp"
+            android:layout_height="65dp"
+            android:background="@drawable/button_behavior"
+            android:text="@string/back"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:fontFamily="@font/wix_made_for_display_semi_bold"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:layout_marginEnd="5dp"
+            />
+
+    </LinearLayout>
+</LinearLayout>
