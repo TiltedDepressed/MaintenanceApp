@@ -48,6 +48,12 @@ class RegActivity : AppCompatActivity() {
         autoLogIn()
 
 
+        binding.alreadyHaveAccountTextView.setOnClickListener {
+            val intent = Intent(this@RegActivity,LoginActivity::class.java)
+            startActivity(intent)
+        }
+
+
     }
 
     private fun autoLogIn() {

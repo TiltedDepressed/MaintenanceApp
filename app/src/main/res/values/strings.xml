@@ -41,4 +41,5 @@
     <string name="problem_name">Problem name:</string>
     <string name="date_and_time_">Date and time:</string>
     <string name="status">Status:</string>
+    <string name="already_have_account">already have account</string>
 </resources>

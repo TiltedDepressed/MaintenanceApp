@@ -42,4 +42,5 @@
     <string name="problem_name">Краткое назв:</string>
     <string name="date_and_time_">Дата и время:</string>
     <string name="status">Статус:</string>
+    <string name="already_have_account">уже есть аккаунт</string>
 </resources>
