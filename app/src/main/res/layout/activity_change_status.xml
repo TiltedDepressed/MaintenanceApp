@@ -42,7 +42,7 @@
             <RadioButton
                 android:id="@+id/firstRadioButton"
                 android:fontFamily="@font/wix_made_for_display_bold"
-                android:text="Active"
+                android:text="@string/active"
                 android:textSize="28sp"
                 android:textColor="@color/white"
                 android:layout_width="match_parent"
@@ -51,7 +51,7 @@
             <RadioButton
                 android:id="@+id/secondRadioButton"
                 android:fontFamily="@font/wix_made_for_display_bold"
-                android:text="Complete"
+                android:text="@string/complete"
                 android:textSize="28sp"
                 android:textColor="@color/white"
                 android:layout_width="match_parent"
@@ -60,7 +60,7 @@
             <RadioButton
                 android:id="@+id/thirdRadioButton"
                 android:fontFamily="@font/wix_made_for_display_bold"
-                android:text="Cancel"
+                android:text="@string/cancel"
                 android:textSize="28sp"
                 android:textColor="@color/white"
                 android:layout_width="match_parent"
