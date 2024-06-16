@@ -7,26 +7,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:layout_gravity="center"
     android:orientation="vertical"
     tools:context=".activities.ChangeStatusActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        >
+
+
     
     
     <LinearLayout
         android:layout_gravity="center"
-        android:padding="25dp"
+        android:padding="30dp"
         android:gravity="center"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ImageView
-            android:src="@drawable/ic_arrows"
+            android:src="@drawable/ic_change_2"
             android:layout_width="128dp"
             android:layout_height="128dp"/>
 
         <TextView
-            android:layout_marginTop="15dp"
-            android:fontFamily="@font/wix_made_for_display_bold"
+            android:layout_marginTop="35dp"
+            android:fontFamily="@font/wix_made_for_display_semi_bold"
             android:textColor="@color/white"
             android:textSize="32sp"
             android:textAlignment="center"
@@ -36,12 +44,13 @@
 
 
         <RadioGroup
+            android:padding="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <RadioButton
                 android:id="@+id/firstRadioButton"
-                android:fontFamily="@font/wix_made_for_display_bold"
+                android:fontFamily="@font/wix_made_for_display_semi_bold"
                 android:text="@string/active"
                 android:textSize="28sp"
                 android:textColor="@color/white"
@@ -50,7 +59,7 @@
 
             <RadioButton
                 android:id="@+id/secondRadioButton"
-                android:fontFamily="@font/wix_made_for_display_bold"
+                android:fontFamily="@font/wix_made_for_display_semi_bold"
                 android:text="@string/complete"
                 android:textSize="28sp"
                 android:textColor="@color/white"
@@ -59,7 +68,7 @@
 
             <RadioButton
                 android:id="@+id/thirdRadioButton"
-                android:fontFamily="@font/wix_made_for_display_bold"
+                android:fontFamily="@font/wix_made_for_display_semi_bold"
                 android:text="@string/cancel"
                 android:textSize="28sp"
                 android:textColor="@color/white"
@@ -72,7 +81,7 @@
         <Button
             android:layout_marginTop="20dp"
             android:id="@+id/backButton"
-            android:layout_width="350dp"
+            android:layout_width="320dp"
             android:layout_height="65dp"
             android:background="@drawable/button_behavior"
             android:text="@string/back"
@@ -85,4 +94,5 @@
             />
 
     </LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -3,6 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
+    android:padding="10dp"
+    android:layout_gravity="center"
+    android:gravity="center"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -11,12 +14,13 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:scrollbars="none">
 
     <LinearLayout
-        android:layout_marginTop="30dp"
-        android:padding="20dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
         android:orientation="vertical"
         android:id="@+id/contentLayout"
         android:layout_width="match_parent"
@@ -25,9 +29,10 @@
         >
 
         <LinearLayout
-            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
             android:gravity="center"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="50dp"
             android:id="@+id/topButtonsLayout"
             android:orientation="horizontal"
             android:layout_width="380dp"
@@ -151,7 +156,7 @@
 
             <Button
                 android:id="@+id/backButton"
-                android:layout_width="170dp"
+                android:layout_weight="1"
                 android:layout_height="65dp"
                 android:background="@drawable/button_behavior"
                 android:text="@string/back"
@@ -161,12 +166,12 @@
                 android:textAlignment="center"
                 android:textAllCaps="false"
                 android:layout_marginEnd="5dp"
-                />
+                android:layout_width="match_parent"/>
 
             <Button
                 android:id="@+id/changeButton"
                 android:layout_marginStart="5dp"
-                android:layout_width="170dp"
+                android:layout_weight="1"
                 android:layout_height="65dp"
                 android:background="@drawable/button_behavior_2"
                 android:text="@string/change"
@@ -175,7 +180,7 @@
                 android:fontFamily="@font/wix_made_for_display_semi_bold"
                 android:textAlignment="center"
                 android:textAllCaps="false"
-                />
+                 android:layout_width="match_parent"/>
 
 
 

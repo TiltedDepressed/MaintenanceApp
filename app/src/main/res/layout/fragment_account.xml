@@ -10,10 +10,12 @@
     >
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:scrollbars="none">
 
     <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
         android:id="@+id/contentLayout"
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -25,7 +27,7 @@
 
 
         <LinearLayout
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="50dp"
             android:gravity="center"
             android:id="@+id/topButtonsLayout"
             android:orientation="horizontal"
@@ -55,7 +57,7 @@
             android:layout_width="190dp"
             android:layout_height="wrap_content"
             android:gravity="right"
-            android:paddingEnd="20dp"
+            android:layout_marginEnd="80dp"
             >
 
             <ImageView
@@ -178,15 +180,16 @@
             />
 
         <LinearLayout
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="20dp"
             android:gravity="center"
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <Button
+                android:layout_weight="1"
                 android:id="@+id/deleteButton"
-                android:layout_width="160dp"
+                android:layout_width="match_parent"
                 android:layout_height="65dp"
                 android:background="@drawable/button_behavior"
                 android:text="@string/delete"
@@ -199,9 +202,10 @@
                 />
 
             <Button
+                android:layout_weight="1"
                 android:id="@+id/updateButton"
                 android:layout_marginStart="5dp"
-                android:layout_width="160dp"
+                android:layout_width="match_parent"
                 android:layout_height="65dp"
                 android:background="@drawable/button_behavior_2"
                 android:text="@string/update"

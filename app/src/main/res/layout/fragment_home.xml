@@ -10,13 +10,11 @@
     tools:context=".fragments.HomeFragment">
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:scrollbars="none">
 
 <LinearLayout
-    android:layout_marginTop="20dp"
     android:id="@+id/contentLayout"
-    android:padding="20dp"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -27,6 +25,7 @@
 
 
     <TextView
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/wix_made_for_display_bold"
         android:text="@string/my_requests"
         android:textAlignment="center"
@@ -38,12 +37,13 @@
 
 
     <androidx.recyclerview.widget.RecyclerView
+        android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="20dp"
         android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="520dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         android:orientation="vertical"
@@ -52,7 +52,6 @@
 
 
     <LinearLayout
-        android:layout_marginTop="-10dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

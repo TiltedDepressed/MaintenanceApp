@@ -8,9 +8,6 @@ import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
-import com.example.maintenanceapplication.R
 import com.example.maintenanceapplication.databinding.ActivityRegBinding
 import com.example.maintenanceapplication.datasource.ServiceBuilder
 import com.example.maintenanceapplication.interfaces.Api
@@ -26,22 +23,27 @@ class RegActivity : AppCompatActivity() {
      private lateinit var password: String
      private lateinit var email: String
      private lateinit var sharePreference: SharedPreferences
+     private  var checkAutoLogIn: Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
+        sharePreference = getSharedPreferences("MY_PRE", Context.MODE_PRIVATE)
+        checkAutoLogIn = sharePreference.getBoolean("REMEMBER_ME", false)
         binding = ActivityRegBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
-
         binding.continueButton.setOnClickListener{
 
             login =  binding.loginEditText.text.toString()
             password = binding.passwordEditText.text.toString()
             email = binding.emailEditText.text.toString()
 
-            if(login.isNotEmpty() && password.isNotEmpty() && email.isNotEmpty()){
-                createAccount(login,password,email)
+            if(correctPassword(password,applicationContext)){
+
+                if(login.isNotEmpty() && password.isNotEmpty() && email.isNotEmpty()){
+                    createAccount(login,password,email)
+                }
+
             }
         }
 
@@ -56,9 +58,9 @@ class RegActivity : AppCompatActivity() {
 
     }
 
+
     private fun autoLogIn() {
-        sharePreference = getSharedPreferences("MY_PRE", Context.MODE_PRIVATE)
-        if(sharePreference.getBoolean("REMEMBER_ME", false)){
+        if(checkAutoLogIn){
             val intent = Intent(this@RegActivity, PinActivity::class.java)
             startActivity(intent)
         }
@@ -99,3 +101,37 @@ class RegActivity : AppCompatActivity() {
         })
     }
 }
+
+//Пароль должен быть не менее 8 символов.
+//В нем должна быть хотя бы 1 строчная и хотя бы 1 заглавная буква.
+//Он должен иметь один специальный символ, например ! или + или - или подобное
+//Он должен содержать хотя бы 1 цифру
+fun correctPassword(password: String, applicationContext: Context): Boolean {
+    if (password.isEmpty()){
+        Toast.makeText(applicationContext, "Пароль должен быть не менее 8 символов", Toast.LENGTH_SHORT).show()
+        return false
+    }
+    if (password.length < 8) {
+        Toast.makeText(applicationContext, "Пароль должен быть не менее 8 символов", Toast.LENGTH_SHORT).show()
+        return false
+    }
+    if (password.filter { it.isDigit() }.firstOrNull() == null){
+        Toast.makeText(applicationContext, "Пароль должен содержать хотя бы 1 цифру", Toast.LENGTH_SHORT).show()
+        return false
+    }
+    if (password.filter { it.isLetter() }.filter { it.isUpperCase() }.firstOrNull() == null){
+        Toast.makeText(applicationContext, "В пароле должна быть хотябы одна заглавная буква", Toast.LENGTH_SHORT).show()
+        return false
+    }
+    if (password.filter { it.isLetter() }.filter { it.isLowerCase() }.firstOrNull() == null){
+        Toast.makeText(applicationContext, "В пароле должна быть хотябы одна строчная буква", Toast.LENGTH_SHORT).show()
+        return false
+    }
+    if (password.filter { !it.isLetterOrDigit() }.firstOrNull() == null){
+        Toast.makeText(applicationContext, "Пароль должен иметь один специальный символ", Toast.LENGTH_SHORT).show()
+        return false
+    }
+    return true
+}
+
+
